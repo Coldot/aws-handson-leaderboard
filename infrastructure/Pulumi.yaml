@@ -1,0 +1,10 @@
+name: aws-handson-leaderboard
+description: Hands-On with Serverless Leaderboard Project
+runtime:
+  name: nodejs
+  options:
+    packagemanager: npm
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-typescript

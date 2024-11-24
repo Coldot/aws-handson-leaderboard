@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10초 맞추기</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>10초 맞추기</h1>
+        <p>시작 버튼을 누른 후, 정확히 10초가 지났다고 생각하면 다시 버튼을 누르세요!</p>
+        <button id="game-button">시작</button>
+        <div id="result" style="display: none;">
+            <h2>게임 종료!</h2>
+            <p>경과 시간: <span id="elapsed-time"></span>초</p>
+            <p>오차: <span id="time-difference"></span>초</p>
+            <input type="text" id="player-name" placeholder="이름을 입력하세요">
+            <button id="submit-score">점수 제출</button>
+        </div>
+        <div id="leaderboard">
+            <h2>리더보드</h2>
+            <ul id="leaderboard-list"></ul>
+        </div>
+    </div>
+    <script src="script-game.js"></script>
+</body>
+</html>
