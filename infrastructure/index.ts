@@ -133,11 +133,7 @@ new aws.lambda.Permission("apiGatewayPermission", {
     sourceArn: pulumi.interpolate`${api.executionArn}/*/*`
 });
 
-const websiteBucket = new aws.s3.Bucket("clickgame-frontend-bucket", {
-    website: {
-        indexDocument: "index.html",
-    },
-});
+const websiteBucket = new aws.s3.Bucket("clickgame-frontend-bucket");
 
 const originAccessIdentity = new aws.cloudfront.OriginAccessIdentity("originAccessIdentity", {
     comment: "OAI for website bucket",
